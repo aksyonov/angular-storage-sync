@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyApp</title>
+</head>
+<body ng-controller="MyCtrl">
+  <input type="text" ng-model="text">
+  <span ng-bind="text"></span>
+  <button ng-click="stop('text')">Stop</button>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+  <script src="angular-storageSync.js"></script>
+  <script>
+  var app = angular.module('myapp', ['storageSync']);
+
+  app.controller('MyCtrl', function ($scope, $storageSync) {
+    $scope.stop = $storageSync.stop;
+    $scope.text = $storageSync('text', function (){
+      return $scope.text;
+    }, '');
+  });
+  </script>
+</body>
+</html>
