@@ -7,7 +7,7 @@ angular.module('storageSync', [])
         def = {};
       }
       listeners[name] = $rootScope.$watch(valFn, function(value) {
-        if (valFn !== undefined) {
+        if (value !== undefined) {
           localStorage[name] = JSON.stringify(value);
         } else {
           delete localStorage[name];
