@@ -1,5 +1,5 @@
 {
-  "name": "angular-storageSync",
+  "name": "angular-storage-sync",
   "version": "0.1.1",
   "devDependencies": {
     "grunt": "*",

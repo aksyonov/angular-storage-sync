@@ -10,13 +10,13 @@
   <span ng-bind="text"></span>
   <button ng-click="stop('text')">Stop</button>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
-  <script src="angular-storageSync.js"></script>
+  <script src="angular-storage-sync.js"></script>
   <script>
   var app = angular.module('myapp', ['storageSync']);
 
-  app.controller('MyCtrl', function ($scope, $storageSync) {
-    $scope.stop = $storageSync.stop;
-    $scope.text = $storageSync('text', function (){
+  app.controller('MyCtrl', function ($scope, storageSync) {
+    $scope.stop = storageSync.stop;
+    $scope.text = storageSync('text', function (){
       return $scope.text;
     }, '');
   });

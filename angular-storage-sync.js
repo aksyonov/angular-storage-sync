@@ -1,5 +1,5 @@
 angular.module('storageSync', [])
-  .factory('$storageSync', function($rootScope) {
+  .factory('storageSync', function($rootScope) {
     'use strict';
 
     function StorageSync(name, valFn, def) {
