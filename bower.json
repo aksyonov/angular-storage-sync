@@ -1,0 +1,12 @@
+{
+  "name": "angular-storageSync",
+  "version": "0.1.0",
+  "main": "angular-storageSync.js",
+  "ignore": [
+    "**/.*",
+    "*.html"
+  ],
+  "dependencies": {
+    "angular": "*"
+  }
+}
