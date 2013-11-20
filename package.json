@@ -1,9 +1,8 @@
 {
   "name": "angular-storage-sync",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "devDependencies": {
     "grunt": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-ngmin": "*"
+    "grunt-contrib-uglify": "*"
   }
 }

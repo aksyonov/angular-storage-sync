@@ -1,12 +1,12 @@
 angular.module('storageSync', [])
-  .factory('storageSync', function($rootScope) {
+  .factory('storageSync', ['$rootScope', function ($rootScope) {
     'use strict';
 
     function StorageSync(name, valFn, def) {
       if (def === undefined) {
         def = {};
       }
-      listeners[name] = $rootScope.$watch(valFn, function(value) {
+      listeners[name] = $rootScope.$watch(valFn, function (value) {
         if (value !== undefined) {
           localStorage[name] = JSON.stringify(value);
         } else {
@@ -20,13 +20,14 @@ angular.module('storageSync', [])
 
     var listeners = {};
 
-    StorageSync.stop = function(name) {
+    StorageSync.stop = function (name) {
       listeners[name]();
     };
 
-    StorageSync.remove = function(name) {
+    StorageSync.remove = function (name) {
       delete localStorage[name];
     };
 
     return StorageSync;
-  });
+  }
+  ]);

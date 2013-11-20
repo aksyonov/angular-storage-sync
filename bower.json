@@ -1,6 +1,6 @@
 {
   "name": "angular-storage-sync",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "angular-storage-sync.js",
   "ignore": [
     "**/.*",
